@@ -53,6 +53,7 @@ spam-cli = "test2.cli.main:main"
 [project.optional-dependencies]
 dev = [
     "pytest",
+    "doit"
 ]
 build = [
     "pyc_wheel"
