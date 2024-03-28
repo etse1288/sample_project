@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "test2"
+version = "2020.0.0"
+requires-python = ">= 3.9"
+
+authors = [
+  {name = "ws1088", email='ws1088@gmail.com'},
+]
+
+maintainers = [
+  {name = "ws1088", email='ws1088@gmail.com'},
+]
+
+description = "Lovely Spam! Wonderful Spam!"
+license = {text = "MIT License"}
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+
+readme = 'README.md'
+
+dependencies = [
+  "pytest~=7.4.0",
+]
+
+[project.scripts]
+spam-cli = "test2.cli.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+build = [
+    "pyc_wheel"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+test2x = ["*.xtxt", "cli/xx/*.txt"]
